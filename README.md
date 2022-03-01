@@ -1,1 +1,1 @@
-# GMAPT480-SkateGame
+# SkateGame
