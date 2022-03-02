@@ -6,9 +6,14 @@ public class SpikeGenerator : MonoBehaviour
 {
     public GameObject Spike;
 
+    public GameObject[] city;
+
     public float MinSpeed;
     public float MaxSpeed;
+
     public float CurrentSpeed;
+
+    public float coundownspee;
 
     public float speedmultiplier;
     // Start is called before the first frame update
@@ -25,6 +30,7 @@ public class SpikeGenerator : MonoBehaviour
         {
             CurrentSpeed += speedmultiplier;
         }
+
     }
 
     public void GenerateSpike()
@@ -35,7 +41,9 @@ public class SpikeGenerator : MonoBehaviour
 
     public void Generate()
     {
-        float random = Random.Range(0.1f, 1.2f);
+        float random = Random.Range(0.1f, 5.0f);
+        Debug.Log("Random = " + random);
         Invoke("GenerateSpike", random);
     }
+
 }
