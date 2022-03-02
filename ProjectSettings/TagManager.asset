@@ -8,6 +8,8 @@ TagManager:
   - nextline
   - finish
   - spike
+  - Tracking Avatar
+  - City
   layers:
   - Default
   - TransparentFX
