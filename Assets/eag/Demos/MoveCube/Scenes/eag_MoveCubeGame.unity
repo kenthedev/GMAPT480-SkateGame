@@ -3773,6 +3773,10 @@ PrefabInstance:
       propertyPath: city.Array.data[3]
       value: 
       objectReference: {fileID: 9071664563957951132, guid: 69657e8d58689404e9d421d4282baf25, type: 3}
+    - target: {fileID: 5331906078393879826, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5331906078393879827, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: JumpForce
       value: 400
@@ -7163,7 +7167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102711532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.562056, y: -0.38361502, z: 0}
+  m_LocalPosition: {x: 25.74, y: -0.38361502, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
