@@ -3775,7 +3775,7 @@ PrefabInstance:
       objectReference: {fileID: 9071664563957951132, guid: 69657e8d58689404e9d421d4282baf25, type: 3}
     - target: {fileID: 5331906078393879826, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5331906078393879827, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: JumpForce
@@ -6903,7 +6903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &2035829497
 MeshRenderer:
   m_ObjectHideFlags: 0
