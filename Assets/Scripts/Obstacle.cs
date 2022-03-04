@@ -5,20 +5,40 @@ using System.Collections.Generic;
 public class Obstacle : MonoBehaviour {
 
     PlayerMovement playerMovement;
+    public float healthCount = 3f;
 
 	private void Start () {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
 	}
 
-    private void OnCollisionEnter (Collision collision)
+    private void OnTriggerEnter2D (Collider2D collision)
     {
-        if (collision.gameObject.name == "Player") {
+        if (collision.gameObject.tag == "spike") {
             // Kill the player
-            playerMovement.Die();
+            Debug.Log("Player hit!");
+            Destroy(collision.gameObject);
+            DecreaseHealth();
         }
     }
 
     private void Update () {
 	
 	}
+
+    private void DecreaseHealth()
+    {
+        if (healthCount <= 0f)
+        {
+            playerMovement.Die();
+        }
+        else
+        {
+            healthCount -= 1f;
+        }
+    }
+
+    public float GetHealth()
+    {
+        return healthCount;
+    }
 }
