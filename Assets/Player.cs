@@ -14,6 +14,10 @@ public class Player : MonoBehaviour
     public float Score;
 
     public Text Scoretext;
+    public Text Healthtext;
+
+    public float health;
+    public Obstacle obstacle;
 
     Rigidbody2D RB;
 
@@ -25,7 +29,9 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        obstacle = GetComponent<Obstacle>();
+        health = obstacle.GetHealth();
+        Healthtext.text = $"Lives: {health}";
     }
 
     // Update is called once per frame
@@ -44,6 +50,9 @@ public class Player : MonoBehaviour
             Score += Time.deltaTime + 0.00001f;
             Scoretext.text = "Score : " + Score.ToString("F");
         }
+
+        health = obstacle.GetHealth();
+        Healthtext.text = $"Lives: {health}";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

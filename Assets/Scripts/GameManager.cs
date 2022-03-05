@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour {
     public static GameManager inst;
 
     [SerializeField] Text scoreText;
+    [SerializeField] Text healthText;
 
     [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] Obstacle obstacle;
 
     public void IncrementScore ()
     {
@@ -18,6 +20,12 @@ public class GameManager : MonoBehaviour {
         scoreText.text = "SCORE: " + score;
         // Increase the player's speed
         playerMovement.speed += playerMovement.speedIncreasePerPoint;
+    }
+
+    public void DecreaseHealth()
+    {
+        float health = obstacle.GetHealth();
+        healthText.text = "HEALTH: " + health.ToString();
     }
 
     private void Awake ()
