@@ -6,8 +6,9 @@ public class Obstacle : MonoBehaviour {
 
     PlayerMovement playerMovement;
     public float healthCount = 3f;
+    public static Obstacle instance;
 
-	private void Start () {
+    private void Start () {
         playerMovement = GameObject.FindObjectOfType<PlayerMovement>();
 	}
 
@@ -40,5 +41,9 @@ public class Obstacle : MonoBehaviour {
     public float GetHealth()
     {
         return healthCount;
+    }
+    private void Awake()
+    {
+        instance = this;
     }
 }
