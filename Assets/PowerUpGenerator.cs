@@ -21,13 +21,14 @@ public class PowerUpGenerator : MonoBehaviour
         if (coundownspee <= 0)
         {
             GeneratePowerup();
-            coundownspee = 10f;
+            coundownspee = 5f;
         }
         Debug.Log(coundownspee);
     }
     public void GeneratePowerup()
     {
-        int Randmo = Random.Range(0, 1);
+        int Randmo = Random.Range(0, 2);
+        Debug.Log("random works" + Randmo);
         Instantiate(powerUp[Randmo], transform.position, transform.rotation);
     }
 
