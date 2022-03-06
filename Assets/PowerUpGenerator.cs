@@ -21,7 +21,7 @@ public class PowerUpGenerator : MonoBehaviour
         if (coundownspee <= 0)
         {
             GeneratePowerup();
-            coundownspee = 5f;
+            coundownspee = 10f;
         }
         Debug.Log(coundownspee);
     }
