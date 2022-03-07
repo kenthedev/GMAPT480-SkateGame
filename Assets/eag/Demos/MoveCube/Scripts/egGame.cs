@@ -176,9 +176,6 @@ public class egGame : MonoBehaviour {
 		//NOTE:Binding will be skipped if ParameterHandler not loaded (i.e. running this scene 
 		//without first running MainMenu scene)
 		//Also, parameters must be added to DefaultParameters.json file (located in StreamingAssets folder).
-		VariableHandler.Instance.Register (ParameterStrings.STARTING_SPEED, Speed);
-		VariableHandler.Instance.Register (ParameterStrings.GRAVITY, Gravity);
-		VariableHandler.Instance.Register (egParameterStrings.GAME_LENGTH, GameLength);
 		print ("Speed=" + Speed);
 		print ("Gravity=" + Gravity);
 		print ("GameLength=" + GameLength);
