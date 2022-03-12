@@ -68,6 +68,19 @@
                 "description": "1=start at default range, 0=start at custom range",
                 "$type": "RangeParameter",
                 "$id": "4"
+            },
+
+
+            {
+                "min_": 400.0,
+                "max_": 700.0,
+                "value_": 1.0,
+                "tick_": 1.0,
+                "name": "Player Jump Height",
+                "alias": "Player Jump Height",
+                "description": "The jumping height for the player",
+                "$type": "RangeParameter",
+                "$id": "7"
             }
 
         ]
@@ -84,6 +97,9 @@
         },
         "Enable Suki Extents": {
             "$ref": "9"
+        },
+        "Player Jump Height": {
+            "$ref": "7"
         }
     }
 }

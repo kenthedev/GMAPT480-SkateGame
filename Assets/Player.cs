@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
     public float JumpForce;
 
     public bool isgrounded;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         Score = 0;
+        instance = this;
     }
     // Start is called before the first frame update
     void Start()
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour
         {
             if (isgrounded == true)
             {
+                AudioManager.instance.SFX[2].Play();
                 Jumpingtheguy();
             }
         }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyTimer : MonoBehaviour
 {
+    public AudioSource SFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,8 @@ public class DestroyTimer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Timer.instance.currentTime += 5f;
+            AudioManager.instance.SFX[0].Play();
+           Player.instance.Score += 20f;
            Destroy(this.gameObject);
         }
     }

@@ -150,7 +150,7 @@ public class egGame : MonoBehaviour {
 
 	//egFloat,etc. are custom variables that can be attached to parameters in the settings menu and portal
 	//They are attached to the parameters in the egAwake function below.
-	egFloat Speed=1.0f;		//speed of player
+	egFloat JumpCharacter=400.0f;		//speed of player
 	egFloat Gravity=-1.0f;	//falling cylinder's gravity (-1.0 is unity default)
 	egInt GameLength=300; 	//in seconds
 
@@ -176,7 +176,12 @@ public class egGame : MonoBehaviour {
 		//NOTE:Binding will be skipped if ParameterHandler not loaded (i.e. running this scene 
 		//without first running MainMenu scene)
 		//Also, parameters must be added to DefaultParameters.json file (located in StreamingAssets folder).
-		print ("Speed=" + Speed);
+
+		VariableHandler.Instance.Register(ParameterStrings.Player_Jump_Height, JumpCharacter);
+
+		JumpCharacter = Player.instance.JumpForce;
+
+		print ("Speed=" + JumpCharacter);
 		print ("Gravity=" + Gravity);
 		print ("GameLength=" + GameLength);
 	}
@@ -258,7 +263,7 @@ public class egGame : MonoBehaviour {
 			}
 			// move the object
             Vector3 pos = PlayerObject.transform.localPosition;  //REPLACE PlayerObject with whatever object or vector you want to be updated
-			pos.x = pos.x + (xPercent * Speed/40); // we use speed as a position scaler
+			//pos.x = pos.x + (xPercent * Speed/40); // we use speed as a position scaler
 			PlayerObject.transform.localPosition = pos;
 		}
 		//shoulder profile is set as "joystick"
@@ -280,7 +285,7 @@ public class egGame : MonoBehaviour {
 			}
 
 			Vector3 pos = PlayerObject.transform.localPosition; //REPLACE PlayerObject with whatever object or vector you want to be updated
-			pos.x = pos.x + (xPercent * Speed/40); // we use speed as position scaler
+			//pos.x = pos.x + (xPercent * Speed/40); // we use speed as position scaler
 			PlayerObject.transform.localPosition = pos;
 		}
 
@@ -295,7 +300,7 @@ public class egGame : MonoBehaviour {
 
 			// only if there is a direction to move, and it's been some time since our last move
 			// Instead of changing the speed of the movement here we change the pause between movements
-			if ((!moveLeft && !moveRight) || (moveLeft && moveRight) || (timeSinceLastLaneMove < 1 / Speed)) // we use speed as a time scaler
+			/*if ((!moveLeft && !moveRight) || (moveLeft && moveRight) || (timeSinceLastLaneMove < 1 / Speed)) // we use speed as a time scaler
 			{
 				return;
 			}
@@ -307,6 +312,7 @@ public class egGame : MonoBehaviour {
 			{
 				pos.x = (pos.x + 0.2f);
 			}
+			*/
 			PlayerObject.transform.localPosition = pos; //REPLACE PlayerObject with whatever object or vector you want to be updated
 			timeSinceLastLaneMove = 0f;
 

@@ -34,6 +34,7 @@ public class Obstacle : MonoBehaviour {
         }
         else
         {
+            AudioManager.instance.SFX[1].Play();
             healthCount -= 1f;
         }
     }
