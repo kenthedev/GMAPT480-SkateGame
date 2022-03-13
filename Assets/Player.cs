@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
 
     public bool isgrounded;
 
+    public int MaxReps;
+    public int Countingthereps;
+
     public bool isalive = true;
 
     public float Score;
@@ -47,6 +50,10 @@ public class Player : MonoBehaviour
                 Jumpingtheguy();
             }
         }
+        if(Countingthereps >= MaxReps)
+        {
+            egGame.instance.PauseGame();
+        }
 
         if(isalive)
         {
@@ -68,11 +75,13 @@ public class Player : MonoBehaviour
             }
 
         }
+        /*
         if (collision.gameObject.CompareTag("spike"))
         {
             isalive = false;
             Time.timeScale = 0f;
         }
+        */
     }
 
     public void Jumpingtheguy()
@@ -81,6 +90,7 @@ public class Player : MonoBehaviour
         {
             RB.AddForce(Vector2.up * JumpForce);
             isgrounded = false;
+            Countingthereps++;
         }
     }
 }

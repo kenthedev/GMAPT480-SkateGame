@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Obstacle : MonoBehaviour {
+    
 
     PlayerMovement playerMovement;
     public float healthCount = 3f;
@@ -30,7 +31,7 @@ public class Obstacle : MonoBehaviour {
     {
         if (healthCount <= 0f)
         {
-            playerMovement.Die();
+            egPauseManager.instance.PauseGame();
         }
         else
         {

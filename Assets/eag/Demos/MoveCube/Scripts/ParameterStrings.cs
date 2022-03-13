@@ -12,4 +12,7 @@ public class ParameterStrings
     public static string STARTING_SPEED = "Player Starting Speed";
 	public static string GRAVITY = "Gravity";
     public static string Player_Jump_Height = "Player Jump Height";
+    public static string ItemSpawnRate = "Power Up Spawn Rate";
+    public static string MaxSpikeSpawnGenerator = "Spike Spawn Rate";
+    public static string MaximumRepsfortheplater = "Max Reps";
 }

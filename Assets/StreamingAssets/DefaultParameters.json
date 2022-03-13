@@ -81,8 +81,42 @@
                 "description": "The jumping height for the player",
                 "$type": "RangeParameter",
                 "$id": "7"
-            }
+            },
 
+            {
+                "min_": 10.0,
+                "max_": 40.0,
+                "value_": 1.0,
+                "tick_": 1.0,
+                "name": "Power Up Spawn Rate",
+                "alias": "Power Up Spawn Rate",
+                "description": "The rate at which the items spawn",
+                "$type": "RangeParameter",
+                "$id": "6"
+            },
+            {
+                "min_": 10.0,
+                "max_": 30.0,
+                "value_": 1.0,
+                "tick_": 1.0,
+                "name": "Spike Spawn Rate",
+                "alias": "Spike Spawn Rate",
+                "description": "Max Speed at which the spikes will spawn",
+                "$type": "RangeParameter",
+                "$id": "8"
+            },
+
+            {
+                "min_": 10.0,
+                "max_": 100.0,
+                "value_": 1.0,
+                "tick_": 1.0,
+                "name": "Max Reps",
+                "alias": "Max Reps",
+                "description": "How many reps would you like the player to do?",
+                "$type": "RangeParameter",
+                "$id": "10"
+            }
         ]
     },
     "parameters": {
@@ -100,6 +134,17 @@
         },
         "Player Jump Height": {
             "$ref": "7"
+        }
+        },
+        "Power Up Spawn Rate": {
+            "$ref": "6"
+        },
+        "Spike Spawn Rate": {
+            "$ref": "8"
+        }
+        },
+        "Max Reps": {
+            "$ref": "10"
         }
     }
 }

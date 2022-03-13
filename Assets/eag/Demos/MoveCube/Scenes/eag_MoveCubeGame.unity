@@ -661,7 +661,8 @@ MonoBehaviour:
   powerUp:
   - {fileID: 7217055267030449550, guid: eba52d2a5667aee458816b23be4fd07e, type: 3}
   - {fileID: 8000830957042369530, guid: 9753374992faab842a46180a1d63493b, type: 3}
-  coundownspee: 0
+  coundownspee: 10
+  MaxSpeed: 10
 --- !u!212 &177946395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4052,6 +4053,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402556025836333585, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
+      propertyPath: MaxSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556025836333585, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: MinSpeed
       value: 1
       objectReference: {fileID: 0}
@@ -4086,6 +4091,14 @@ PrefabInstance:
     - target: {fileID: 5331906078393879826, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331906078393879827, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331906078393879827, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
+      propertyPath: MaxReps
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5331906078393879827, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: JumpForce

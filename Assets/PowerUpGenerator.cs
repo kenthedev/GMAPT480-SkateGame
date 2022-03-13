@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PowerUpGenerator : MonoBehaviour
 {
+    public static PowerUpGenerator instance;
     public GameObject[] powerUp;
 
 
     public float coundownspee;
+    public float MaxSpeed;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +28,7 @@ public class PowerUpGenerator : MonoBehaviour
         if (coundownspee <= 0)
         {
             GeneratePowerup();
-            coundownspee = 10f;
+            coundownspee = MaxSpeed;
         }
         Debug.Log(coundownspee);
     }

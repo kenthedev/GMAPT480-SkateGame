@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         alive = false;
         // Restart the game
-        Invoke("Restart", 2);
+        egGame.instance.PauseGame();
     }
 
     void Restart ()

@@ -15,6 +15,7 @@ using UnityEngine.Networking;
 /// </summary>
 public class egGame : MonoBehaviour {
 
+	public static egGame instance;
     // player note from the game over panel
     // in Citadel we store the game information such as score and stats in different placese, we may want to have a script 
     // or a singleton that store all those information (so the tracker footer can retrieve those information directly by it)
@@ -34,7 +35,8 @@ public class egGame : MonoBehaviour {
 	void Awake () {
 		PlayerPrefs.SetString(egParameterStrings.LAUNCHER_ADDRESS,networkAddress);
 		egAwake ();
-		Physics.gravity = new Vector3 (0.0f, Gravity, 0.0f);
+		instance = this;
+		//Physics.gravity = new Vector3 (0.0f, Gravity, 0.0f);
 
 	}
 	
@@ -59,10 +61,12 @@ public class egGame : MonoBehaviour {
 			startTime = Time.time;
 			egBeginSession (); 
 		}
-		duration = Time.time - startTime;			
+		duration = Time.time - startTime;
+		/*
 		if (duration >= GameLength) {  //is game time over?
 			EndGame();
 		}
+		*/
 		//Get translated game input from SUKI
 		egGetSukiInput ();
     }
@@ -76,6 +80,7 @@ public class egGame : MonoBehaviour {
 		Time.timeScale = 0;
 		Time.fixedDeltaTime = 0;
 		AudioListener.volume = 0;
+		Player.instance.Countingthereps = 0;
 	}
 
     /// <summary>
@@ -151,8 +156,9 @@ public class egGame : MonoBehaviour {
 	//egFloat,etc. are custom variables that can be attached to parameters in the settings menu and portal
 	//They are attached to the parameters in the egAwake function below.
 	egFloat JumpCharacter=400.0f;		//speed of player
-	egFloat Gravity=-1.0f;	//falling cylinder's gravity (-1.0 is unity default)
-	egInt GameLength=300; 	//in seconds
+	egFloat ItemSpawnRatey=10.0f;	//falling cylinder's gravity (-1.0 is unity default)
+	egFloat Maxspeedforspike = 20.0f;   //in seconds
+	egFloat MaxReps = 10.0f;
 
 	// Use this for initialization
 	void egAwake () {
@@ -178,12 +184,18 @@ public class egGame : MonoBehaviour {
 		//Also, parameters must be added to DefaultParameters.json file (located in StreamingAssets folder).
 
 		VariableHandler.Instance.Register(ParameterStrings.Player_Jump_Height, JumpCharacter);
+		VariableHandler.Instance.Register(ParameterStrings.ItemSpawnRate, ItemSpawnRatey);
+		VariableHandler.Instance.Register(ParameterStrings.MaxSpikeSpawnGenerator, Maxspeedforspike);
+		VariableHandler.Instance.Register(ParameterStrings.MaximumRepsfortheplater, MaxReps);
 
+		//the height at which the player will Jump
 		JumpCharacter = Player.instance.JumpForce;
-
-		print ("Speed=" + JumpCharacter);
-		print ("Gravity=" + Gravity);
-		print ("GameLength=" + GameLength);
+		//The rate at which the powerups will spawn in
+		ItemSpawnRatey = PowerUpGenerator.instance.MaxSpeed;
+		//The Max Speed at which the spikes will spawn at
+		Maxspeedforspike = SpikeGenerator.instance.MaxSpeed;
+		//the max of reps that the patient will do before taking a break
+		MaxReps = Player.instance.Countingthereps;
 	}
 
 	// Update is called once per frame

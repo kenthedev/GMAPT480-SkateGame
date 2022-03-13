@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class egPauseManager : MonoBehaviour {
+    public static egPauseManager instance;
     public GameObject pauseButton;
     public GameObject retryButton;
     public GameObject NextButton;
@@ -25,6 +26,7 @@ public class egPauseManager : MonoBehaviour {
 
     void Awake()
     {
+        instance = this;
         isPaused = false;
         if (pausePanel)
             pausePanel.SetActive(false);
@@ -134,6 +136,8 @@ public class egPauseManager : MonoBehaviour {
     public void UnPauseGame()
     {
         currentPage = Page.PLAY;
+        Obstacle.instance.healthCount = 3f;
+        Player.instance.Countingthereps = 0;
         gameManager.UnPauseGame();
         if (pausePanel)
             pausePanel.SetActive(false);

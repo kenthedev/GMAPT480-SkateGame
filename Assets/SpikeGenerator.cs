@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpikeGenerator : MonoBehaviour
 {
+    public static SpikeGenerator instance;
     public GameObject Spike;
 
     public GameObject[] city;
@@ -16,6 +17,11 @@ public class SpikeGenerator : MonoBehaviour
     public float coundownspee;
 
     public float speedmultiplier;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
