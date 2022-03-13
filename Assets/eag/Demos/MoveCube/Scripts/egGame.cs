@@ -191,15 +191,15 @@ public class egGame : MonoBehaviour {
 		VariableHandler.Instance.Register(ParameterStrings.MaximumLengthForThePlayer, GameLength);
 
 		//the height at which the player will Jump
-		JumpCharacter = Player.instance.JumpForce;
+		Player.instance.JumpForce =JumpCharacter;
 		//The rate at which the powerups will spawn in
-		ItemSpawnRatey = PowerUpGenerator.instance.MaxSpeed;
+		PowerUpGenerator.instance.MaxSpeed = ItemSpawnRatey;
 		//The Max Speed at which the spikes will spawn at
-		Maxspeedforspike = SpikeGenerator.instance.MaxSpeed;
+		SpikeGenerator.instance.MaxSpeed = Maxspeedforspike;
 		//the max of reps that the patient will do before taking a break
-		MaxReps = Player.instance.Countingthereps;
+		Player.instance.Countingthereps = MaxReps;
 		//The max time that the player will play
-		GameLength = Timer.instance.startingTime;
+		Timer.instance.startingTime = GameLength;
 	}
 
 	// Update is called once per frame

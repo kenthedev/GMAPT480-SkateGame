@@ -5406,6 +5406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
+  startingTime: 60
   countdownText: {fileID: 1219412887}
 --- !u!1001 &1389420434
 PrefabInstance:

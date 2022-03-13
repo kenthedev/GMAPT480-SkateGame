@@ -136,22 +136,27 @@
         "Suki type": {
             "$ref": "3"
         },
+
         "Suki Default Percent": {
             "$ref": "4"
         },
+
         "Suki file": {
             "$ref": "5"
         },
+
         "Enable Suki Extents": {
             "$ref": "9"
         },
+
         "Player Jump Height": {
             "$ref": "7"
-        }
         },
+
         "Power Up Spawn Rate": {
             "$ref": "6"
         },
+
         "Spike Spawn Rate": {
             "$ref": "8"
         },
@@ -159,8 +164,9 @@
         "Max Reps": {
             "$ref": "10"
         },
-        "Max Time": {
+
+        "Max Length": {
             "$ref": "11"
         }
-    
+    }
 }
