@@ -117,9 +117,22 @@
                 "$type": "RangeParameter",
                 "$id": "10"
             }
+            ,
+            {
+                "min_": 10.0,
+                "max_": 180.0,
+                "value_": 1.0,
+                "tick_": 1.0,
+                "name": "Max Length",
+                "alias": "Max Length",
+                "description": "How long would you like the player to play?",
+                "$type": "RangeParameter",
+                "$id": "11"
+            }
         ]
     },
-    "parameters": {
+    "parameters": 
+    {
         "Suki type": {
             "$ref": "3"
         },
@@ -141,10 +154,13 @@
         },
         "Spike Spawn Rate": {
             "$ref": "8"
-        }
         },
+        
         "Max Reps": {
             "$ref": "10"
+        },
+        "Max Time": {
+            "$ref": "11"
         }
-    }
+    
 }

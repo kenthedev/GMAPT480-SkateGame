@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float currentTime = 0f;
-    float startingTime = 300f;
+    public float startingTime = 100f;
     public static Timer instance;
+
     [SerializeField] Text countdownText;
     // Start is called before the first frame update
     private void Awake()

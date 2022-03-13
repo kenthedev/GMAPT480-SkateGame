@@ -159,6 +159,7 @@ public class egGame : MonoBehaviour {
 	egFloat ItemSpawnRatey=10.0f;	//falling cylinder's gravity (-1.0 is unity default)
 	egFloat Maxspeedforspike = 20.0f;   //in seconds
 	egFloat MaxReps = 10.0f;
+	egFloat GameLength = 60.0f;
 
 	// Use this for initialization
 	void egAwake () {
@@ -187,6 +188,7 @@ public class egGame : MonoBehaviour {
 		VariableHandler.Instance.Register(ParameterStrings.ItemSpawnRate, ItemSpawnRatey);
 		VariableHandler.Instance.Register(ParameterStrings.MaxSpikeSpawnGenerator, Maxspeedforspike);
 		VariableHandler.Instance.Register(ParameterStrings.MaximumRepsfortheplater, MaxReps);
+		VariableHandler.Instance.Register(ParameterStrings.MaximumLengthForThePlayer, GameLength);
 
 		//the height at which the player will Jump
 		JumpCharacter = Player.instance.JumpForce;
@@ -196,6 +198,8 @@ public class egGame : MonoBehaviour {
 		Maxspeedforspike = SpikeGenerator.instance.MaxSpeed;
 		//the max of reps that the patient will do before taking a break
 		MaxReps = Player.instance.Countingthereps;
+		//The max time that the player will play
+		GameLength = Timer.instance.startingTime;
 	}
 
 	// Update is called once per frame

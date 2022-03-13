@@ -15,4 +15,6 @@ public class ParameterStrings
     public static string ItemSpawnRate = "Power Up Spawn Rate";
     public static string MaxSpikeSpawnGenerator = "Spike Spawn Rate";
     public static string MaximumRepsfortheplater = "Max Reps";
+    public static string MaximumLengthForThePlayer = "Max Length";
+
 }

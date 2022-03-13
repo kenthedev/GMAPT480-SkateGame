@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 
         if(isalive)
         {
-            Score += Time.deltaTime + 0.00001f;
+            Score += Time.deltaTime * 1f;
             Scoretext.text = "Score : " + Score.ToString("F");
         }
 
