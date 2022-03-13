@@ -21,7 +21,7 @@ public class DestroyTimer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             AudioManager.instance.SFX[0].Play();
-           Player.instance.Score += 20f;
+           Player.instance.Score += 60f;
            Destroy(this.gameObject);
         }
     }

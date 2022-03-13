@@ -199,7 +199,7 @@ public class egGame : MonoBehaviour {
 		//The Max Speed at which the spikes will spawn at
 		SpikeGenerator.instance.MaxSpeed = Maxspeedforspike;
 		//the max of reps that the patient will do before taking a break
-		Player.instance.Countingthereps = MaxReps;
+		Player.instance.MaxReps = MaxReps;
 		//The max time that the player will play
 		Timer.instance.startingTime = GameLength;
 	}

@@ -640,7 +640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177946389}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.32, y: -0.12, z: 10}
+  m_LocalPosition: {x: 14.32, y: 0.216, z: 10}
   m_LocalScale: {x: 0.283, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1552364600}
@@ -978,7 +978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &410663626
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5536,6 +5536,8 @@ MonoBehaviour:
   MenuScene: eag_MainMenu
   GameScene: eag_KickCubeGame
   PlayerObject: {fileID: 1203551965}
+  Leftfoot: 0
+  RightFoot: 0
   networkAddress: localhost
   jumping: {fileID: 1203551966}
   duration: 0
@@ -6593,7 +6595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc654637b17dcb4c8dea59610ff55b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCount: 3
+  healthCount: 99999
 --- !u!1 &1628637889
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     public bool isgrounded;
 
     public int MaxReps;
-    public int Countingthereps;
+    public int Countingthereps = 0;
 
     public bool isalive = true;
 
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         }
         if(Countingthereps >= MaxReps)
         {
-            egGame.instance.PauseGame();
+            egPauseManager.instance.PauseGame();
         }
 
         if(isalive)

@@ -4,11 +4,7 @@
         "Gameplay": [
             {
                 "strings": [
-                    "Arms",
-                    "Legs",
-                    "Head",
-                    "Balance and Reach",
-                    "Simple Balance"
+                    "Legs"
                 ],
                 "value_": "Arms",
                 "name": "Suki type",
@@ -30,9 +26,6 @@
                     "Arms\\R_ShoulderAbduction.suki",
                     "Arms\\R_Hand.suki",
                     "Legs\\L_Foot.suki",
-                    "Legs\\R_Foot.suki",
-                    "Legs\\L_KneeKick.suki",
-                    "Legs\\R_KneeKick.suki",
                     "Head\\HeadTilt.suki",
                     "Balance and Reach\\L_ReachWave.suki",
                     "Balance and Reach\\LR_SideBending.suki",

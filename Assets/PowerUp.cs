@@ -20,7 +20,7 @@ public class PowerUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Obstacle.instance.healthCount++;
+            Player.instance.Score += 30f;
             Destroy(this.gameObject);
         }
     }

@@ -136,8 +136,9 @@ public class egPauseManager : MonoBehaviour {
     public void UnPauseGame()
     {
         currentPage = Page.PLAY;
-        Obstacle.instance.healthCount = 3f;
+        Obstacle.instance.healthCount = 9999f;
         Player.instance.Countingthereps = 0;
+        Player.instance.isgrounded = true;
         gameManager.UnPauseGame();
         if (pausePanel)
             pausePanel.SetActive(false);
