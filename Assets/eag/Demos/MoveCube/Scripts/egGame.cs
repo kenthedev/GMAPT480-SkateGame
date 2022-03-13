@@ -26,6 +26,8 @@ public class egGame : MonoBehaviour {
 	public string GameScene = "eag_KickCubeGame";
 
 	public Transform PlayerObject;  //the player object
+	public bool Leftfoot;
+	public bool RightFoot;
 	float startTime; //start time of game
 
 	public static bool isPaused;
@@ -336,12 +338,10 @@ public class egGame : MonoBehaviour {
 		//using foot or hand x-y position to control player position
 		
 		//You could also use each independently as Kollect does to control the hand/footprints.
-		if (suki.Location2DExists ("leftfoot") || suki.Location2DExists ("rightfoot") || suki.Location2DExists ("lefthand") || suki.Location2DExists ("righthand")) {
+		if (suki.Location2DExists ("leftfoot")) {
 			Vector2 fpos;
-			if (suki.Location2DExists ("leftfoot"))
-				fpos = suki.GetLocation2D ("leftfoot");
-			else if (suki.Location2DExists ("rightfoot"))
-				fpos = suki.GetLocation2D ("rightfoot");
+			if (suki.Location2DExists("leftfoot"))
+				fpos = suki.GetLocation2D("leftfoot");
 			/*
 			else if (suki.Location2DExists ("lefthand"))
 				fpos = suki.GetLocation2D ("lefthand");
@@ -351,11 +351,17 @@ public class egGame : MonoBehaviour {
 			else
 				fpos = new Vector2 ();
 
-			if(fpos.y > 0.3f)
-            {
-				Debug.Log("fpos = " + fpos.y);
-				jumping.Jumpingtheguy();
-            }
+
+			if (!Leftfoot)
+			{
+				if (fpos.y > 0.3f)
+				{
+					Leftfoot = true;
+					Debug.Log("fpos = " + fpos.y);
+					jumping.Jumpingtheguy();
+				}
+			}
+
 			/*
 			Vector3 pos = PlayerObject.transform.localPosition; //REPLACE PlayerObject with whatever object or vector you want to be updated
 			// convert 0f to 1f to -1f to 1f
@@ -369,6 +375,34 @@ public class egGame : MonoBehaviour {
 			PlayerObject.transform.localPosition = pos;
 		*/
 		}
+		if(suki.Location2DExists("rightfoot"))
+        {
+			Vector2 fpos2;
+			if(suki.Location2DExists("rightfoot"))
+            {
+				fpos2 = suki.GetLocation2D("rightfoot");
+            }
+			else
+            {
+				fpos2 = new Vector2();
+            }
+
+			if (!RightFoot)
+			{
+				if (fpos2.y > 0.3f)
+				{
+					RightFoot = true;
+					Debug.Log("fpos2 =" + fpos2.y);
+					jumping.Jumpingtheguy();
+				}
+			}
+
+			if(Leftfoot == true && RightFoot == true)
+            {
+				Leftfoot = false;
+				RightFoot = false;
+            }
+        }
 		
 		
 		/*
