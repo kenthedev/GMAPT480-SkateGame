@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     {
         obstacle = GetComponent<Obstacle>();
         health = obstacle.GetHealth();
-        Healthtext.text = $"Lives: {health}";
+        Healthtext.text = $"Extra Lives: {health}";
     }
 
     // Update is called once per frame
@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
         }
 
         health = obstacle.GetHealth();
-        Healthtext.text = $"Lives: {health}";
+        Healthtext.text = $"Extra Lives: {health}";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
