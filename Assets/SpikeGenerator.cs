@@ -14,6 +14,10 @@ public class SpikeGenerator : MonoBehaviour
 
     public float CurrentSpeed;
 
+    public float Maxtime;
+
+    public float TimerGoDown;
+
     public float coundownspee;
 
     public float speedmultiplier;
@@ -27,14 +31,22 @@ public class SpikeGenerator : MonoBehaviour
     {
         CurrentSpeed = MinSpeed;
         GenerateSpike();
+        TimerGoDown = Maxtime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(CurrentSpeed < MaxSpeed)
+        TimerGoDown -= Time.deltaTime;
+
+        if (TimerGoDown <= 0)
         {
-            CurrentSpeed += speedmultiplier;
+            TimerGoDown = Maxtime;
+            if (CurrentSpeed < MaxSpeed)
+            {
+                CurrentSpeed += speedmultiplier;
+                TimerGoDown = Maxtime;
+            }
         }
 
     }

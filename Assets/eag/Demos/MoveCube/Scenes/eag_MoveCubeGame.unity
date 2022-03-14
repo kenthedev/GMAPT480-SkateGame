@@ -1971,7 +1971,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: db26aa0e63585f748961600f0d513495, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.031012535, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4053,8 +4053,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402556025836333585, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
+      propertyPath: Maxtime
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556025836333585, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: MaxSpeed
-      value: 30
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 402556025836333585, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: MinSpeed
@@ -4067,6 +4071,10 @@ PrefabInstance:
     - target: {fileID: 402556025836333585, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: city.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402556025836333585, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
+      propertyPath: speedmultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402556025836333585, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: city.Array.data[0]
@@ -4162,7 +4170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5331906078885689152, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.79
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5331906079840787342, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: m_Name
@@ -5304,6 +5312,8 @@ MonoBehaviour:
   MinSpeed: 1
   MaxSpeed: 12
   CurrentSpeed: 0
+  Maxtime: 0
+  TimerGoDown: 0
   coundownspee: 5
   speedmultiplier: 0.0015
 --- !u!212 &1363164527

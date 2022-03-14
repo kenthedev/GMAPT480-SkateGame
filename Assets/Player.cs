@@ -75,13 +75,7 @@ public class Player : MonoBehaviour
             }
 
         }
-        /*
-        if (collision.gameObject.CompareTag("spike"))
-        {
-            isalive = false;
-            Time.timeScale = 0f;
-        }
-        */
+        
     }
 
     public void Jumpingtheguy()
