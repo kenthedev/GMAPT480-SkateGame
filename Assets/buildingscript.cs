@@ -13,7 +13,7 @@ public class buildingscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * Time.deltaTime);
+        transform.Translate(Vector2.left * Time.deltaTime * 1.2f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

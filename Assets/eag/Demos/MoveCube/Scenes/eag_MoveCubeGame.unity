@@ -973,12 +973,12 @@ GameObject:
   - component: {fileID: 410663628}
   - component: {fileID: 410663627}
   m_Layer: 5
-  m_Name: Health
+  m_Name: Multiplier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &410663626
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4116,6 +4116,10 @@ PrefabInstance:
       propertyPath: Healthtext
       value: 
       objectReference: {fileID: 410663627}
+    - target: {fileID: 5331906078393879827, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
+      propertyPath: scoremultiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5331906078393879853, guid: 511955fabf95bd544ab5c9484f81d298, type: 3}
       propertyPath: m_Size.x
       value: 1.2459097
