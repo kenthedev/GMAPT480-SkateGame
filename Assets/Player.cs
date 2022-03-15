@@ -80,6 +80,7 @@ public class Player : MonoBehaviour
         
     }
 
+
     public void Jumpingtheguy()
     {
         if (isgrounded == true)

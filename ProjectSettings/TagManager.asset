@@ -10,6 +10,13 @@ TagManager:
   - spike
   - Tracking Avatar
   - City
+  - Avocado
+  - Lemon
+  - Grapes
+  - Eggplant
+  - Pear
+  - Banana
+  - Cherry
   layers:
   - Default
   - TransparentFX
