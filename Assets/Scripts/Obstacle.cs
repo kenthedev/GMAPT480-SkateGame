@@ -35,6 +35,7 @@ public class Obstacle : MonoBehaviour {
         }
         else
         {
+            Player.instance.scoremultiplier -= 1.0f;
             AudioManager.instance.SFX[1].Play();
             healthCount -= 1f;
         }

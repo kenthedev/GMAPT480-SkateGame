@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     public Text Scoretext;
     public Text Healthtext;
 
+    public float scoremultiplier;
+
     public float health;
     public Obstacle obstacle;
 
@@ -36,7 +38,7 @@ public class Player : MonoBehaviour
     {
         obstacle = GetComponent<Obstacle>();
         health = obstacle.GetHealth();
-        Healthtext.text = $"Extra Lives: {health}";
+
     }
 
     // Update is called once per frame
@@ -57,12 +59,12 @@ public class Player : MonoBehaviour
 
         if(isalive)
         {
-            Score += Time.deltaTime * 1f;
+            Score += Time.deltaTime * scoremultiplier;
+            Healthtext.text = "Current Multiplier " + scoremultiplier;
             Scoretext.text = "Score : " + Score.ToString("F");
         }
 
         health = obstacle.GetHealth();
-        Healthtext.text = $"Extra Lives: {health}";
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
