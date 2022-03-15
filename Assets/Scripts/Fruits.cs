@@ -25,43 +25,43 @@ public class Fruits : MonoBehaviour
             //Avocado
             if(Fruittopick[0])
             {
-                Player.instance.Score += 1000;
+                Player.instance.Score += 100;
                 Destroy(this);
             }
             //Lemon
             else if(Fruittopick[1])
             {
-                Player.instance.Score += 2000;
+                Player.instance.Score += 200;
                 Destroy(this);
             }
             //Grapes
             else if(Fruittopick[2])
             {
-                Player.instance.Score += 3000;
+                Player.instance.Score += 300;
                 Destroy(this);
             }
             //Eggplant
             else if(Fruittopick[3])
             {
-                Player.instance.Score += 4000;
+                Player.instance.Score += 400;
                 Destroy(this);
             }
             //Pear
             else if(Fruittopick[4])
             {
-                Player.instance.Score += 5000;
+                Player.instance.Score += 500;
                 Destroy(this);
             }
             //Banana
             else if(Fruittopick[5])
             {
-                Player.instance.Score += 6000;
+                Player.instance.Score += 600;
                 Destroy(this);
             }
             //Cherry
             else if(Fruittopick[6])
             {
-                Player.instance.Score += 7000;
+                Player.instance.Score += 700;
                 Destroy(this);
             }
         }
