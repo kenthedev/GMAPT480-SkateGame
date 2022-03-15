@@ -17,7 +17,6 @@ public class Obstacle : MonoBehaviour {
     {
         if (collision.gameObject.tag == "spike") {
             // Kill the player
-            SpikeGenerator.instance.CurrentSpeed--;
             Debug.Log("Player hit!");
             Destroy(collision.gameObject);
             DecreaseHealth();

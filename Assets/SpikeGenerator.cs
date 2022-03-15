@@ -49,6 +49,11 @@ public class SpikeGenerator : MonoBehaviour
             }
         }
 
+        if(CurrentSpeed >= MaxSpeed)
+        {
+            CurrentSpeed = MinSpeed;
+        }
+
     }
 
     public void GenerateSpike()

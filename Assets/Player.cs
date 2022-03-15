@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
             if (isgrounded == true)
             {
-                AudioManager.instance.SFX[2].Play();
+                
                 Jumpingtheguy();
             }
         }
@@ -82,6 +82,7 @@ public class Player : MonoBehaviour
     {
         if (isgrounded == true)
         {
+            AudioManager.instance.SFX[2].Play();
             RB.AddForce(Vector2.up * JumpForce);
             isgrounded = false;
             Countingthereps++;
