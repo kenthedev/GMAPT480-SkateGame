@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 102fe754b0c1f9b46b5915a2657919a9, type: 3}
+  m_Name: 4_Eggplant
+  m_EditorClassIdentifier: 
+  foodName: Eggplant
+  description: Eggplant Collectible
+  icon: {fileID: 21300000, guid: 683bf63b6c808d94a9a03003955144e3, type: 3}
+  value: 400
