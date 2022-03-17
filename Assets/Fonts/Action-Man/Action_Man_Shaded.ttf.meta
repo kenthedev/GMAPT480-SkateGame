@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cff35bdcfbea54e69a00c67f280cb85c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Action Man Shaded
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 70d5735c7648347f1abec65e9493cdf4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

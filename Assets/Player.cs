@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -60,8 +61,9 @@ public class Player : MonoBehaviour
         if(isalive)
         {
             Score += Time.deltaTime * scoremultiplier;
-            Healthtext.text = "Current Multiplier " + scoremultiplier;
-            Scoretext.text = "Score : " + Score.ToString("F");
+            int ScoreInt = (int)Math.Round(Score); ;
+            Healthtext.text = "Multiplier: " + scoremultiplier;
+            Scoretext.text = "Score: " + ScoreInt.ToString();
         }
 
         health = obstacle.GetHealth();
