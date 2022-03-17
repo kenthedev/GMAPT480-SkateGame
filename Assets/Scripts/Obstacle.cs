@@ -33,6 +33,10 @@ public class Obstacle : MonoBehaviour {
         {
             egPauseManager.instance.PauseGame();
         }
+        else if (Player.instance.scoremultiplier <= 0f)
+        {
+            Player.instance.scoremultiplier = 0f;
+        }
         else
         {
             Player.instance.scoremultiplier -= 1.0f;
