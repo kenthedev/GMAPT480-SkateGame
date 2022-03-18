@@ -63,7 +63,7 @@ public class PowerUpGenerator : MonoBehaviour
             
             countdownSpeed = MaxSpeed;
         }
-        Debug.Log(countdownSpeed);
+        // Debug.Log(countdownSpeed);
     }
     public void GeneratePowerup(int randNo)
     {

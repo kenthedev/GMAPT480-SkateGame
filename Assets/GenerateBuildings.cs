@@ -26,7 +26,7 @@ public class GenerateBuildings : MonoBehaviour
             GenerateCity();
             coundownspee = 10f;
         }
-        Debug.Log(coundownspee);
+        // Debug.Log(coundownspee);
     }
 
     public void GenerateCity()

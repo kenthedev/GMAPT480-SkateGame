@@ -27,6 +27,7 @@ public class Food : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Player.instance.Score += value;
+            Debug.Log("Added a value of: " + value);
             Destroy(this.gameObject);
         }
     }

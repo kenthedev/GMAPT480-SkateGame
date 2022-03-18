@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7217055267030449536}
   - component: {fileID: 7217055267030449537}
   - component: {fileID: 4142434766572690458}
+  - component: {fileID: -2939464915303539611}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Untagged
@@ -100,7 +101,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.19
 --- !u!114 &4142434766572690458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +114,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d0c0fb017cbe54db502d9409ba12a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-2939464915303539611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7217055267030449550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d47168182833049bf757c2b7633695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Fruittopick: 00010000000000
