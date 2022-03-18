@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -642,7 +642,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 14.32, y: 0.216, z: 10}
   m_LocalScale: {x: 0.283, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1716228934}
   m_Father: {fileID: 1552364600}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -659,9 +660,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUp:
-  - {fileID: 7217055267030449550, guid: eba52d2a5667aee458816b23be4fd07e, type: 3}
-  - {fileID: 8000830957042369530, guid: 9753374992faab842a46180a1d63493b, type: 3}
-  coundownspee: 10
+  - {fileID: 7217055267030449550, guid: 8626f6882880090459d60b21ecda6069, type: 3}
+  - {fileID: 7217055267030449550, guid: b40f2f6cc63deac4490a785707f2c748, type: 3}
+  - {fileID: 7217055267030449550, guid: c99d72cc14fe72d468a561e1e9462464, type: 3}
+  - {fileID: 7217055267030449550, guid: b6463fd4582443c4e8e405cec0ed9115, type: 3}
+  - {fileID: 7217055267030449550, guid: 9dcbae6bb509ed840a88f22099bcc44f, type: 3}
+  - {fileID: 7217055267030449550, guid: eaa073cde87572d4b8b4a10cee0987ce, type: 3}
+  - {fileID: 7217055267030449550, guid: 47aa510b94064f845af9963b59b8bae0, type: 3}
+  - {fileID: 7217055267030449550, guid: aca8c5d464413b844917edbc8bc0bd26, type: 3}
+  mapUsed: 0
+  foodMap: {fileID: 2800000, guid: 926c7f0d97a7410419cd5ba9ca2283b9, type: 3}
+  colortoPrefab:
+  - prefab:
+    - {fileID: 7217055267030449550, guid: b40f2f6cc63deac4490a785707f2c748, type: 3}
+    - {fileID: 7217055267030449550, guid: c99d72cc14fe72d468a561e1e9462464, type: 3}
+    - {fileID: 7217055267030449550, guid: b6463fd4582443c4e8e405cec0ed9115, type: 3}
+    - {fileID: 7217055267030449550, guid: 9dcbae6bb509ed840a88f22099bcc44f, type: 3}
+    - {fileID: 7217055267030449550, guid: eaa073cde87572d4b8b4a10cee0987ce, type: 3}
+    - {fileID: 7217055267030449550, guid: 47aa510b94064f845af9963b59b8bae0, type: 3}
+    - {fileID: 7217055267030449550, guid: aca8c5d464413b844917edbc8bc0bd26, type: 3}
+    color: {r: 0, g: 0, b: 0, a: 1}
+  parentObj: {fileID: 1716228933}
+  countdownSpeed: 0
   MaxSpeed: 10
 --- !u!212 &177946395
 SpriteRenderer:
@@ -5761,7 +5781,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 0
   startingTime: 60
-  countdownText: {fileID: 1219412887}
+  timeRemaining: 0
+  timerIsRunning: 0
+  timerSlider: {fileID: 0}
+  timerText: {fileID: 0}
 --- !u!1 &1371493426
 GameObject:
   m_ObjectHideFlags: 0
@@ -7498,6 +7521,36 @@ Transform:
   m_Children:
   - {fileID: 840060576}
   m_Father: {fileID: 1565950750}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1716228933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1716228934}
+  m_Layer: 0
+  m_Name: FoodHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1716228934
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716228933}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.533569, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 177946390}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1771240665

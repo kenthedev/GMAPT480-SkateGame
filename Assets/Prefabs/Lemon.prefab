@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7217055267030449539}
   - component: {fileID: 7217055267030449536}
   - component: {fileID: 7217055267030449537}
-  - component: {fileID: 7217055267030449538}
+  - component: {fileID: 4142434766572690458}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Untagged
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4d764e21086ee484ab0b28535972502b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38b8bd2661376354faca5ea49065c0e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
---- !u!114 &7217055267030449538
+--- !u!114 &4142434766572690458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,7 +110,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7217055267030449550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55d9b1b2c9cd7b3439130d37cccfeec6, type: 3}
+  m_Script: {fileID: 11500000, guid: b7d0c0fb017cbe54db502d9409ba12a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}

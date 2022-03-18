@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7217055267030449539}
   - component: {fileID: 7217055267030449536}
   - component: {fileID: 7217055267030449537}
-  - component: {fileID: 5785517101617677817}
+  - component: {fileID: 7217055267030449538}
   m_Layer: 0
-  m_Name: Banana
+  m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 503df5ecb7cb9894b999c6f96f67061e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a2257bfaf8069f4f94f6c1a3420a61e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
---- !u!114 &5785517101617677817
+--- !u!114 &7217055267030449538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7217055267030449550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d0c0fb017cbe54db502d9409ba12a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 55d9b1b2c9cd7b3439130d37cccfeec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
