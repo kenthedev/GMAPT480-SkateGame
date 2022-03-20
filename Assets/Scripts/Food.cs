@@ -30,6 +30,7 @@ public class Food : MonoBehaviour
             Player.instance.Score += value;
             Debug.Log("Added a value of: " + value);
             Instantiate(particleSys, collision.gameObject.transform.position, Quaternion.identity);
+          
             Destroy(this.gameObject);
         }
     }
