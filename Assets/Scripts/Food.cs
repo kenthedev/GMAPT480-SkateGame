@@ -9,7 +9,8 @@ public class Food : MonoBehaviour
     private string description;
     private Sprite icon;
     private float value;
-
+    [SerializeField]
+    ParticleSystem particleSys;
     public void CreateFood(FoodData data)
     {
         this.FoodName = data.FoodName;
@@ -28,6 +29,7 @@ public class Food : MonoBehaviour
         {
             Player.instance.Score += value;
             Debug.Log("Added a value of: " + value);
+            Instantiate(particleSys, collision.gameObject.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }

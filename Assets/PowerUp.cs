@@ -6,6 +6,8 @@ public class PowerUp : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject health;
+   
+  
     void Start()
     {
         
@@ -21,6 +23,7 @@ public class PowerUp : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Player.instance.Score += 30f;
+            
             Destroy(this.gameObject);
         }
     }

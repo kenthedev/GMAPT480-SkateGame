@@ -26,6 +26,9 @@ public class Player : MonoBehaviour
     public float health;
     public Obstacle obstacle;
 
+    [SerializeField]
+    GameObject particle;
+
     Rigidbody2D RB;
 
     private void Awake()
